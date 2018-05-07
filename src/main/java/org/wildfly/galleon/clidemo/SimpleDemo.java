@@ -61,7 +61,7 @@ public class SimpleDemo {
                         .setInheritConfigs(false)
                         .setInheritPackages(false)
                         .build())
-                .newPackage("org.jboss.galleon.demo.webapp", true)
+                .newPackage("org.wildfly.galleon.demo.webapp", true)
                 // Package content
                 .addPath("standalone/deployments/" + warPath.getFileName(), warPath, true)
                 .addDependency("org.wildfly:wildfly-servlet-galleon-pack", "org.wildfly.naming")
@@ -79,7 +79,7 @@ public class SimpleDemo {
                 installer().
                 // FEATURE-PACK
                 newFeaturePack(SECURITY_CONFIG_GAV)
-                .newPackage("org.jboss.galleon.demo.security", true)
+                .newPackage("org.wildfly.galleon.demo.security", true)
                 // Package content
                 .addPath("standalone/configuration/application-roles.properties", roles, true)
                 .addPath("standalone/configuration/application-users.properties", users, true)
